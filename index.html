@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Divisas con Notas Integradas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- LADO IZQUIERDO: CONVERSOR DE DIVISAS -->
+    <section class="panel">
+      <h2 class="panel-title">Conversor de Divisas</h2>
+      
+      <div class="form-group">
+        <label for="amount">Monto a convertir:</label>
+        <input type="number" id="amount" value="100" placeholder="Ingresa un monto">
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="from-currency">De:</label>
+          <select id="from-currency">
+            <option value="USD">USD - Dólar Estadounidense</option>
+            <option value="EUR">EUR - Euro</option>
+            <option value="ARS">ARS - Peso Argentino</option>
+            <option value="MXN">MXN - Peso Mexicano</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="to-currency">A:</label>
+          <select id="to-currency">
+            <option value="EUR">EUR - Euro</option>
+            <option value="USD">USD - Dólar Estadounidense</option>
+            <option value="ARS" selected>ARS - Peso Argentino</option>
+            <option value="MXN">MXN - Peso Mexicano</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="result-box">
+        <p>Resultado estimado:</p>
+        <h3 id="result-text">0.00 ARS</h3>
+      </div>
+    </section>
+
+    <!-- LADO DERECHO: BLOC DE NOTAS INTEGRADO -->
+    <section class="panel">
+      <h2 class="panel-title">Notas de Operación</h2>
+      
+      <div class="notes-container">
+        <label for="notes-input">Anotaciones personales / Registro automático:</label>
+        <textarea id="notes-input" placeholder="Tus conversiones e ideas aparecerán aquí..."></textarea>
+        
+        <label>Historial rápido:</label>
+        <div class="notes-list" id="history-list">
+          <!-- Las conversiones pasadas se agregarán aquí dinámicamente -->
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
